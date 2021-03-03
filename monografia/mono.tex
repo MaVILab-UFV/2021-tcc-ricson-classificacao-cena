@@ -6,11 +6,18 @@
 \renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
 \renewcommand{\familydefault}{\sfdefault}
 \renewcommand*\contentsname{Sumário}
+\usepackage[brazilian]{babel}
+\addto\captionsbrazilian{
+	\renewcommand{\figurename}{Figura}
+	\renewcommand{\tablename}{Tabela}
+}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{makeidx}
 \usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{ragged2e}
 
 \usepackage[left=3.00cm, right=2.00cm, top=3.00cm, bottom=2.00cm]{geometry}
 \linespread{1.25}
@@ -20,67 +27,107 @@
 
 \begin{document}
 	
-	\begin{center}
-			\thispagestyle{empty}
-			UNIVERSIDADE FEDERAL DE VIÇOSA\\
-			CENTRO DE CIÊNCIAS EXATAS E TECNOLÓGICAS\\
-			DEPARTAMENTO DE INFORMÁTICA
-			\vfill
-			{\large \textbf{PROJETO FINAL DE CURSO}}
-			\vfill
-			{\Large \textbf{TÍTULO}}
-			\vfill
-			\textbf{Ricson Luiz Oliveira Vilaça} \hfill Graduando em Ciência da Computação
-			\vfill
-			Michel Melo da Silva\\
-			(Orientador)
-			\vfill
-			VIÇOSA - MINAS GERAIS\\
-			2021
-		
-		\newpage
-			\thispagestyle{empty}
-			\textbf{Ricson Luiz Oliveira Vilaça}
-			\vfill
-			{\Large \textbf{TÍTULO}}
-			\vfill
-			\begin{flushright}
-				\begin{minipage}{.5\textwidth}
-					Monografia apresentada ao curso de Ciência da Computação da Universidade Federal de Viçosa como parte das exigências para a aprovação na disciplina Seminários I\\\\
-					Orientador: Michel Melo da Silva
-				\end{minipage}
-			\end{flushright}
-			\vfill
-			VIÇOSA - MINAS GERAIS\\
-			2021
-	\end{center}
+	\centering
 	
-		\newpage
-			\thispagestyle{empty}
-			\tableofcontents
+		\thispagestyle{empty}
+		UNIVERSIDADE FEDERAL DE VIÇOSA\\
+		CENTRO DE CIÊNCIAS EXATAS E TECNOLÓGICAS\\
+		DEPARTAMENTO DE INFORMÁTICA
+		\vfill
+		{\large \textbf{PROJETO FINAL DE CURSO}}
+		\vfill
+		{\Large \textbf{TÍTULO}}
+		\vfill
+		\textbf{Ricson Luiz Oliveira Vilaça} \hfill Graduando em Ciência da Computação
+		\vfill
+		Michel Melo da Silva\\
+		(Orientador)
+		\vfill
+		VIÇOSA - MINAS GERAIS\\
+		2021
+	
+	\newpage
+		\thispagestyle{empty}
+		\textbf{Ricson Luiz Oliveira Vilaça}
+		\vfill
+		{\Large \textbf{TÍTULO}}
+		\vfill
+		\begin{flushright}
+			\begin{minipage}{.5\textwidth}
+				Monografia apresentada ao curso de Ciência da Computação da Universidade Federal de Viçosa como parte das exigências para a aprovação na disciplina Seminário I\\\\
+				Orientador: Michel Melo da Silva
+			\end{minipage}
+		\end{flushright}
+		\vfill
+		VIÇOSA - MINAS GERAIS\\
+		2021
+	
+	\justifying
+	
+	\newpage
+		\tableofcontents
+		\thispagestyle{empty}
+	
+	\newpage
+		\centering\section*{RESUMO}\justifying
 		
-		\newpage
-			\section*{RESUMO}
-			
-		\newpage
-			\section{INTRODUÇÃO}
-			\subsection{Objetivos}
-			
-		\newpage
-			\section{REFERENCIAL TEÓRICO}
+		\noindent\textbf{TÍTULO DO PROJETO}\\
 		
-		\newpage
-			\section{METODOLOGIA}
-			\subsection{Requisitos}
+		\indent Michel Melo da Silva (Orientador)\\
+		\indent Ricson Luiz Oliveira Vilaça (Estudante)\\
 		
-		\newpage
-			\section{REFERÊNCIAS BIBLIOGRÁFICAS}
-			
-		\newpage
-			\section{ANEXOS}
-			
-		\newpage
-			\section{CRONOGRAMA}
+		\noindent \textbf{RESUMO}\\
+		\\\\\\\\\\
+		
+		\noindent \textbf{PALAVRAS-CHAVE}\\
+		\indent Citar 3 palavras-chave\\
+		
+		\noindent \textbf{ÁREA DE CONHECIMENTO}\\
+		\indent Consultar tabela do CNPq e informar o nome e o código.\\
+		
+		\noindent \textbf{LINHA DE PESQUISA}\\
+		\indent Consultar tabela no site do DPI e informar o nome e o código.\\
+		
+	\newpage
+		\section{INTRODUÇÃO}
+		\subsection{Objetivos}
+		
+	\newpage
+		\section{REFERENCIAL TEÓRICO}
+	
+	\newpage
+		\section{METODOLOGIA}
+		\subsection{Requisitos}
+	
+	\newpage
+		\section{REFERÊNCIAS BIBLIOGRÁFICAS}
+		
+	\newpage
+		\section{ANEXOS}
+		
+	\newpage
+		\section{CRONOGRAMA}
+		\begin{table}[htbp]
+			\centering
+			\caption{Cronograma do Projeto em Meses (2021)}
+			\label{tab:cronograma}
+			\begin{tabular}{lcccccccccccc} %|c|c|c|c|c|c|c|c|c|c|c|c
+				\toprule
+				\textbf{Atividade} & \textbf{Fev} & \textbf{Mar} & \textbf{Abr} & \textbf{Mai} & \textbf{Jun} & \textbf{Jul} & \textbf{Ago} & \textbf{Set} & \textbf{Out} & \textbf{Nov} \\
+				\midrule
+				Estudo de CNNs & $\bullet$\\
+				Estudo do dataset & $\bullet$ & $\bullet$\\
+				Busca por rede & & $\bullet$\\
+				Estudo do framework & & $\bullet$ & $\bullet$ & $\bullet$\\
+				Fine tuning & & & $\bullet$ & $\bullet$\\
+				Análise do resultado & & & & $\bullet$ & $\bullet$\\
+				Modificações na rede & & & & & $\bullet$ & $\bullet$\\
+				Modificações no input & & & & & & $\bullet$ & $\bullet$\\
+				Analisar resultado & & & & & & & $\bullet$ & $\bullet$\\
+				Escrita final & & & & & & & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$\\
+				\bottomrule
+			\end{tabular}%
+		\end{table}
 	
 
 \end{document}
