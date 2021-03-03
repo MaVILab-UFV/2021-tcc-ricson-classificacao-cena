@@ -2,7 +2,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage{tocloft}
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
 \renewcommand{\familydefault}{\sfdefault}
+\renewcommand*\contentsname{Sumário}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -17,8 +20,8 @@
 
 \begin{document}
 	
-	\begin{titlepage}
-		\begin{center}
+	\begin{center}
+			\thispagestyle{empty}
 			UNIVERSIDADE FEDERAL DE VIÇOSA\\
 			CENTRO DE CIÊNCIAS EXATAS E TECNOLÓGICAS\\
 			DEPARTAMENTO DE INFORMÁTICA
@@ -34,11 +37,9 @@
 			\vfill
 			VIÇOSA - MINAS GERAIS\\
 			2021
-		\end{center}
-	\end{titlepage}
-
-	\begin{titlepage}
-		\begin{center}
+		
+		\newpage
+			\thispagestyle{empty}
 			\textbf{Ricson Luiz Oliveira Vilaça}
 			\vfill
 			{\Large \textbf{TÍTULO}}
@@ -52,7 +53,34 @@
 			\vfill
 			VIÇOSA - MINAS GERAIS\\
 			2021
-		\end{center}
-	\end{titlepage}
+	\end{center}
+	
+		\newpage
+			\thispagestyle{empty}
+			\tableofcontents
+		
+		\newpage
+			\section*{RESUMO}
+			
+		\newpage
+			\section{INTRODUÇÃO}
+			\subsection{Objetivos}
+			
+		\newpage
+			\section{REFERENCIAL TEÓRICO}
+		
+		\newpage
+			\section{METODOLOGIA}
+			\subsection{Requisitos}
+		
+		\newpage
+			\section{REFERÊNCIAS BIBLIOGRÁFICAS}
+			
+		\newpage
+			\section{ANEXOS}
+			
+		\newpage
+			\section{CRONOGRAMA}
+	
 
 \end{document}
